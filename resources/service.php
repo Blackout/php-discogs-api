@@ -139,6 +139,16 @@ return [
                     'type' => 'string',
                     'location' => 'query',
                     'required' => false
+                ],
+                'per_page' => [
+                    'type' => 'integer',
+                    'location' => 'query',
+                    'required' => false
+                ],
+                'page' => [
+                    'type' => 'integer',
+                    'location' => 'query',
+                    'required' => false
                 ]
             ]
         ],
@@ -231,18 +241,6 @@ return [
             'httpMethod' => 'GET',
             'uri' => 'oauth/identity',
             'responseModel' => 'GetResponse',
-        ],
-        'getProfile' => [
-            'httpMethod' => 'GET',
-            'uri' => 'users/{username}',
-            'responseModel' => 'GetResponse',
-            'parameters' => [
-                'username' => [
-                    'type' => 'string',
-                    'location' => 'uri',
-                    'required' => true
-                ],
-            ],
         ],
         'getInventory' => [
             'httpMethod' => 'GET',
